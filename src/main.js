@@ -30,7 +30,7 @@ ctx.save();
 function setSize() {
 	ctx.restore();
 	ctx.save();
-	scale = window.devicePixelRatio * QUALITY;
+	scale = QUALITY;
 	w = window.innerWidth;
 	canvas.width = w * scale;
 	maxX = Math.floor((w - LINE_WIDTH) / GRID_SPACING);
