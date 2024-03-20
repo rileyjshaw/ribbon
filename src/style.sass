@@ -1,0 +1,63 @@
+body
+	font-family: Avenir, Montserrat, Corbel, 'URW Gothic', source-sans-pro, sans-serif
+	color: #222
+
+canvas, .overlay
+	position: fixed
+	top: 0
+	left: 0
+	height: 100%
+	width: 100%
+
+canvas
+	cursor: pointer
+	background: #fc4248
+
+.overlay
+	background: url("../public/paper.png")
+	mix-blend-mode: hard-light
+	opacity: 0.85
+
+.instructions
+	position: fixed
+	top: 50%
+	left: 50%
+	transform: translate(-50%, -50%)
+	display: flex
+	flex-direction: column
+	align-items: center
+	padding: 1.5em 2em
+	border-radius: 8px
+	text-align: center
+	background: #f080f0
+	box-shadow: 1px 2px 2px hsl(340deg 60% 50% / 0.333), 2px 4px 4px hsl(340deg 60% 50% / 0.333), 3px 6px 6px hsl(340deg 60% 50% / 0.333)
+
+h1
+	margin: 0
+
+p
+	margin: 0.25em 0 1.5em
+
+button
+	background-color: #fbeee0
+	border: 2px solid #f060d0
+	border-radius: 9em
+	box-shadow: #f060d0 4px 4px 0 0
+	cursor: pointer
+	font: inherit
+	padding: 0 18px
+	line-height: 36px
+
+button:hover
+	background-color: #fff
+
+button:active
+	box-shadow: #f060d0 2px 2px 0 0
+	transform: translate(2px, 2px)
+
+.started
+	.overlay
+		pointer-events: none
+
+	.instructions
+		display: none
